@@ -3,12 +3,10 @@ package application.data;
 import application.enums.DurationEnum;
 import lombok.Data;
 
-import java.time.LocalDateTime;
-
 @Data
-public class Schedule {
+public class Duration {
 
-    public Schedule(Integer count, DurationEnum duration) {
+    public Duration(Integer count, DurationEnum duration) {
         this.count = count;
         this.duration = duration;
     }

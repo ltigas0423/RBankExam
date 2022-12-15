@@ -12,7 +12,7 @@ public class Task {
 
     private List<Task> taskList = Lists.newArrayList();
 
-    private Schedule schedule;
+    private Duration schedule;
 
     private Boolean isCompleted = Boolean.FALSE;
 

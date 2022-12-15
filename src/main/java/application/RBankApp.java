@@ -1,7 +1,7 @@
 package application;
 
 import application.data.ProjectPlan;
-import application.data.Schedule;
+import application.data.Duration;
 import application.data.Task;
 import application.enums.DurationEnum;
 import com.google.common.collect.Lists;
@@ -62,7 +62,7 @@ public class RBankApp {
             generateSchedule(task);
     }
 
-    public LocalDateTime generateEndingHours(Schedule schedule, LocalDateTime startingDate) {
+    public LocalDateTime generateEndingHours(Duration schedule, LocalDateTime startingDate) {
         var duration = schedule.getDuration();
         switch (duration) {
             case MINUTES:
@@ -100,59 +100,59 @@ public class RBankApp {
 //
         var task = new Task();
         task.setId(1L);
-        task.setSchedule(new Schedule(2, DurationEnum.DAYS));
+        task.setSchedule(new Duration(2, DurationEnum.DAYS));
 
         var task2 = new Task();
         task2.setId(2L);
-        task2.setSchedule(new Schedule(2, DurationEnum.HOURS));
+        task2.setSchedule(new Duration(2, DurationEnum.HOURS));
 
         var task3 = new Task();
         task3.setId(3L);
-        task3.setSchedule(new Schedule(2, DurationEnum.DAYS));
+        task3.setSchedule(new Duration(2, DurationEnum.DAYS));
 
         var task4 = new Task();
         task4.setId(4L);
-        task4.setSchedule(new Schedule(2, DurationEnum.WEEKS));
+        task4.setSchedule(new Duration(2, DurationEnum.WEEKS));
 
         var task5 = new Task();
         task5.setId(5L);
-        task5.setSchedule(new Schedule(2, DurationEnum.DAYS));
+        task5.setSchedule(new Duration(2, DurationEnum.DAYS));
 
         task3.setTaskList(Lists.newArrayList(task4, task5));
 
         var task6 = new Task();
         task6.setId(6l);
-        task6.setSchedule(new Schedule(2, DurationEnum.MONTHS));
+        task6.setSchedule(new Duration(2, DurationEnum.MONTHS));
 
         var task7 = new Task();
         task7.setId(7l);
-        task7.setSchedule(new Schedule(2, DurationEnum.MINUTES));
+        task7.setSchedule(new Duration(2, DurationEnum.MINUTES));
 
         var task8= new Task();
         task8.setId(8l);
-        task8.setSchedule(new Schedule(2, DurationEnum.DAYS));
+        task8.setSchedule(new Duration(2, DurationEnum.DAYS));
 
         task6.setTaskList(Lists.newArrayList(task7,task8));
 
         var task9 = new Task();
         task9.setId(9l);
-        task9.setSchedule(new Schedule(2, DurationEnum.DAYS));
+        task9.setSchedule(new Duration(2, DurationEnum.DAYS));
 
         task8.setTaskList(Lists.newArrayList(task9));
 
         var task10 = new Task();
         task10.setId(10l);
-        task10.setSchedule(new Schedule(2, DurationEnum.DAYS));
+        task10.setSchedule(new Duration(2, DurationEnum.DAYS));
 
         task9.setTaskList(Lists.newArrayList(task10));
 
         var task11 =  new Task();
         task11.setId(11L);
-        task11.setSchedule(new Schedule(5, DurationEnum.DAYS));
+        task11.setSchedule(new Duration(5, DurationEnum.DAYS));
 
         var task12 = new Task();
         task12.setId(12L);
-        task12.setSchedule(new Schedule(3, DurationEnum.DAYS));
+        task12.setSchedule(new Duration(3, DurationEnum.DAYS));
 
         task12.setTaskList(Lists.newArrayList(task11));
 
